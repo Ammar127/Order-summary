@@ -1,0 +1,18 @@
+Todays Task
+
+use invoice template that was provided prevously. rar file that was attached in day 3 or day 4.
+ create following components in the app
+
+- container component ( this will hold all the data sharing and read create update and delete operations)
+
+-list component this will list the items of invoice and emit the delete operation to container component
+
+-create component this will handle the create and update of item and emit the item to container conponent so that will perform the operation
+
+use the json server to create 1st five items for the list of invoice
+
+create the pipe for total and subtotal to show in the container component
+
+
+you guys need to evaluate this task to Mr Abeel.
+if you need any guidance he will provide you. else I also be available for any queries

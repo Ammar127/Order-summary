@@ -1,0 +1,36 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <td><strong>Item</strong></td>
+      <td class="text-center"><strong>Price</strong></td>
+      <td class="text-center"><strong>Quantity</strong></td>
+      <td class="text-right"><strong>Totals</strong></td>
+      <td class="text-right"><strong>Actions</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- foreach ($order->lineItems as $line) or some such thing here -->
+    <tr app-row *ngFor="let item of items; let i = index" [item]="item" (edit)="onEdit(i, item)" (delete)="onDelete(i)"></tr>
+    <ng-template *ngIf="isFooter">
+      <tr>
+         <td class="thick-line"></td>
+         <td class="thick-line"></td>
+         <td class="thick-line text-center"><strong>Subtotal</strong></td>
+         <td class="thick-line text-right">$670.99</td>
+       </tr>
+       <tr>
+         <td class="no-line"></td>
+         <td class="no-line"></td>
+         <td class="no-line text-center"><strong>Shipping</strong></td>
+         <td class="no-line text-right">$15</td>
+       </tr>
+       <tr>
+         <td class="no-line"></td>
+         <td class="no-line"></td>
+         <td class="no-line text-center"><strong>Total</strong></td>
+         <td class="no-line text-right">$685.99</td>
+       </tr>
+      </ng-template>
+  </tbody>
+</table>
+

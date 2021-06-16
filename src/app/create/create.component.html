@@ -1,0 +1,16 @@
+<div class="row" [formGroup]="form">
+  <div class="col-md-3">
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="col-md-3">
+    <input type="text" class="form-control" formControlName="price">
+  </div>
+  <div class="col-md-3">
+    <input type="text" class="form-control" formControlName="quantity">
+  </div>
+
+  <div class="col-md-3">
+    <button *ngIf="!isEdit" class="btn btn-primary" (click)="onCreate()"> Create </button>
+    <button *ngIf="isEdit" class="btn btn-primary" (click)="onEdit()"> Edit </button>
+  </div>
+</div>
